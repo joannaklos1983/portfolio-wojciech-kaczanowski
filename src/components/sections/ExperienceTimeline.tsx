@@ -214,10 +214,10 @@ export default function ExperienceTimeline() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="space-y-2">
               <div className="text-4xl font-display font-normal text-[#1a1a1a]">
-                20+
+                25+
               </div>
               <div className="text-sm text-[#6a6a6a]">
-                Lat w branży FMCG
+               Lat doświadczenia w FMCG
               </div>
             </div>
             <div className="space-y-2">
@@ -225,15 +225,15 @@ export default function ExperienceTimeline() {
                 4
               </div>
               <div className="text-sm text-[#6a6a6a]">
-                Organizacje o różnej skali
+                Organizacje i struktury sprzedażowe
               </div>
             </div>
             <div className="space-y-2">
               <div className="text-4xl font-display font-normal text-[#1a1a1a]">
-                13
+                100+
               </div>
               <div className="text-sm text-[#6a6a6a]">
-                Lat w PepsiCo
+               Osób w strukturach zespołowych
               </div>
             </div>
           </div>
