@@ -87,7 +87,7 @@ export default function ExperienceTimeline() {
   return (
     <section
       id="doswiadczenie"
-      className="bg-[#f3f0eb] py-16 md:py-20"
+      className="bg-[#f3f0eb] py-12 md:py-20"
     >
       <Container>
 
@@ -97,60 +97,55 @@ export default function ExperienceTimeline() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-12"
+          className="mb-10 md:mb-12"
         >
 
-          <div className="mb-4 flex items-center gap-4">
+          <div className="mb-3 md:mb-4 flex items-center gap-4">
             <span className="text-xs font-medium uppercase tracking-wider text-[#6a6a6a]">
               Doświadczenie operacyjne
             </span>
-
             <div className="h-px flex-1 bg-[#d5d0c7]" />
           </div>
 
-          <h2 className="mb-8 font-display text-4xl font-normal text-[#1a1a1a] md:text-5xl">
+          <h2 className="mb-6 md:mb-8 font-display text-3xl md:text-4xl lg:text-5xl font-normal text-[#1a1a1a]">
             Doświadczenie zawodowe
           </h2>
 
           {/* Metryki */}
-          <div className="grid grid-cols-2 gap-8 border-t border-[#e7e3dc] pt-6 pb-2 md:grid-cols-4">
+          <div className="grid grid-cols-2 gap-6 md:gap-8 border-t border-[#e7e3dc] pt-5 md:pt-6 pb-2 md:grid-cols-4">
 
             <div className="space-y-1">
-              <div className="font-display text-4xl font-normal text-[#1a1a1a]">
+              <div className="font-display text-3xl md:text-4xl font-normal text-[#1a1a1a]">
                 20+
               </div>
-
-              <div className="text-sm text-[#6a6a6a]">
+              <div className="text-xs md:text-sm text-[#6a6a6a]">
                 Lat w branży FMCG
               </div>
             </div>
 
             <div className="space-y-1">
-              <div className="font-display text-4xl font-normal text-[#1a1a1a]">
+              <div className="font-display text-3xl md:text-4xl font-normal text-[#1a1a1a]">
                 100+
               </div>
-
-              <div className="text-sm text-[#6a6a6a]">
+              <div className="text-xs md:text-sm text-[#6a6a6a]">
                 Osób w zespołach
               </div>
             </div>
 
             <div className="space-y-1">
-              <div className="font-display text-4xl font-normal text-[#1a1a1a]">
+              <div className="font-display text-3xl md:text-4xl font-normal text-[#1a1a1a]">
                 4
               </div>
-
-              <div className="text-sm text-[#6a6a6a]">
+              <div className="text-xs md:text-sm text-[#6a6a6a]">
                 Organizacje różnej skali
               </div>
             </div>
 
             <div className="space-y-1">
-              <div className="font-display text-4xl font-normal text-[#1a1a1a]">
+              <div className="font-display text-3xl md:text-4xl font-normal text-[#1a1a1a]">
                 13
               </div>
-
-              <div className="text-sm text-[#6a6a6a]">
+              <div className="text-xs md:text-sm text-[#6a6a6a]">
                 Lat w PepsiCo
               </div>
             </div>
@@ -173,7 +168,7 @@ export default function ExperienceTimeline() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="relative pb-8 pl-12 last:pb-0"
+                className="relative pb-6 md:pb-8 pl-8 md:pl-12 last:pb-0"
               >
 
                 {/* Punkt timeline */}
@@ -186,33 +181,31 @@ export default function ExperienceTimeline() {
 
                   <button
                     onClick={() => toggleItem(item.id)}
-                    className="w-full px-6 py-4 text-left"
+                    className="w-full px-5 md:px-6 py-4 text-left"
                   >
 
-                    <div className="space-y-3">
+                    <div className="space-y-2.5 md:space-y-3">
 
                       {/* Okres */}
                       <div className="flex items-center gap-3">
                         <span className="text-xs font-medium uppercase tracking-wider text-[#6a6a6a]">
                           {item.period}
                         </span>
-
                         <div className="h-px flex-1 bg-[#e7e3dc]" />
                       </div>
 
                       {/* Stanowisko */}
                       <div className="space-y-1">
-                        <h3 className="font-display text-2xl font-normal text-[#1a1a1a] md:text-3xl">
+                        <h3 className="font-display text-xl md:text-2xl lg:text-3xl font-normal text-[#1a1a1a]">
                           {item.position}
                         </h3>
-
                         <p className="text-sm text-[#6a6a6a]">
                           {item.company}
                         </p>
                       </div>
 
                       {/* Opis */}
-                      <p className="leading-relaxed text-[#4a4a4a]">
+                      <p className="text-sm md:text-base leading-relaxed text-[#4a4a4a]">
                         {item.description}
                       </p>
 
@@ -239,7 +232,6 @@ export default function ExperienceTimeline() {
                             d="M19 9l-7 7-7-7"
                           />
                         </svg>
-
                       </div>
 
                     </div>
@@ -257,13 +249,13 @@ export default function ExperienceTimeline() {
                         className="overflow-hidden"
                       >
 
-                        <div className="border-t border-[#e7e3dc] px-6 pb-5 pt-3">
+                        <div className="border-t border-[#e7e3dc] px-5 md:px-6 pb-4 md:pb-5 pt-3">
 
-                          <h4 className="mb-4 text-xs font-medium uppercase tracking-wide text-[#6a6a6a]">
+                          <h4 className="mb-3 md:mb-4 text-xs font-medium uppercase tracking-wide text-[#6a6a6a]">
                             Kluczowe obszary
                           </h4>
 
-                          <ul className="space-y-3">
+                          <ul className="space-y-2.5 md:space-y-3">
 
                             {item.responsibilities.map(
                               (responsibility, idx) => (
@@ -275,15 +267,12 @@ export default function ExperienceTimeline() {
                                     duration: 0.3,
                                     delay: idx * 0.05,
                                   }}
-                                  className="flex items-start gap-3 text-[#4a4a4a]"
+                                  className="flex items-start gap-3 text-sm md:text-base text-[#4a4a4a]"
                                 >
-
                                   <span className="mt-1.5 flex-shrink-0 text-[#8a8580]">
                                     —
                                   </span>
-
                                   <span>{responsibility}</span>
-
                                 </motion.li>
                               )
                             )}
