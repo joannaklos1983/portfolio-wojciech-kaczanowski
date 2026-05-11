@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Cormorant Garamond', serif;
+  --font-sans: 'Inter', sans-serif;
+
+  --cream: #f5f1eb;
+  --warm-beige: #e8dfd4;
+  --soft-taupe: #c9bfb3;
+  --warm-gray: #8a8176;
+  --graphite: #2a2823;
+  --deep-charcoal: #1a1816;
+
+  --space-section: 10rem;
+  --space-section-sm: 6rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-[#f5f1eb] text-[#2a2823] antialiased;
+    font-family: var(--font-sans);
+    font-feature-settings: 'kern' 1, 'liga' 1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    @apply font-light text-[#1a1816];
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  h1 {
+    @apply text-5xl md:text-6xl lg:text-7xl leading-tight;
+  }
+
+  h2 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--soft-taupe);
+}
+
+::selection {
+  background: var(--warm-beige);
+  color: var(--deep-charcoal);
+}
