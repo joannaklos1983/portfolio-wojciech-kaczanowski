@@ -24,7 +24,7 @@ export default function Hero() {
 
               <div className="mb-6 flex items-center gap-4">
                 <span className="text-sm font-medium text-[#6a6a6a]">
-                  Zarządzanie operacyjne • Organizacja pracy • Rozwój firmy
+                  FMCG • Sprzedaż • Zarządzanie oddziałami
                 </span>
 
                 <div className="h-px flex-1 bg-[#d5d0c7]" />
@@ -35,7 +35,7 @@ export default function Hero() {
               </h1>
 
               <p className="text-xl font-light text-[#5c5c5c]">
-                Manager i lider operacyjny
+               Zarządzanie sprzedażą i organizacją pracy zespołów
               </p>
 
             </div>
