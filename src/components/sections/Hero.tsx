@@ -2,129 +2,192 @@
 
 import { motion } from 'framer-motion';
 import Container from '@/components/layout/Container';
-import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center py-24 md:py-32 overflow-hidden bg-[#2b2b2b]">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-[#25282d] py-24 md:py-32">
       <Container className="relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 items-start lg:items-center">
-          
-          {/* Kolumna treści */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 items-center">
+
+          {/* Lewa kolumna */}
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="lg:col-span-7 space-y-12"
+            transition={{ duration: 0.7 }}
+            className="lg:col-span-7"
           >
-            {/* Nazwa i rola */}
-            <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-normal text-[#e8e6e3] leading-tight">
-                Imię Nazwisko
+
+            {/* Top label */}
+            <div className="flex items-center gap-4 mb-10">
+              <span className="text-xs tracking-[0.2em] uppercase text-[#8c9199] font-medium">
+                Operacje • Zarządzanie • Rozwój Organizacji
+              </span>
+
+              <div className="h-px flex-1 bg-[#3a3f46]" />
+            </div>
+
+            {/* Headline */}
+            <div className="space-y-8">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight font-display font-normal text-[#f1efec] max-w-4xl">
+                Doświadczenie w zarządzaniu operacjami i rozwoju struktur organizacyjnych
               </h1>
-              <p className="text-xl md:text-2xl text-[#a8a6a3] font-light">
-                Zarządzanie operacjami i strukturami organizacyjnymi
+
+              <p className="max-w-2xl text-base md:text-lg leading-relaxed text-[#b2b0ad]">
+                Wieloletnie doświadczenie w zarządzaniu operacyjnym,
+                rozwijaniu zespołów oraz usprawnianiu procesów wspierających
+                efektywność organizacji i realizację celów biznesowych.
               </p>
             </div>
 
-            {/* Obszary kompetencji */}
-            <div className="space-y-6 pt-4">
-              <div className="space-y-4">
-                <p className="text-base text-[#b8b6b3] leading-relaxed">
-                  Wieloletnie doświadczenie w zarządzaniu operacyjnym, 
-                  optymalizacji procesów biznesowych i budowaniu 
-                  efektywnych struktur organizacyjnych w firmach 
-                  o różnej skali działania.
-                </p>
+            {/* Kompetencje */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-5 mt-14">
+
+              <div className="flex items-start gap-4">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#6f7782] mt-2.5 flex-shrink-0" />
+                <span className="text-sm text-[#a4a2a0]">
+                  Zarządzanie operacyjne
+                </span>
               </div>
 
-              {/* Kluczowe obszary */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 pt-4">
-                <div className="flex items-start gap-3">
-                  <div className="w-1 h-1 rounded-full bg-[#8b7355] mt-2 flex-shrink-0" />
-                  <span className="text-sm text-[#9a9896]">Zarządzanie operacyjne</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-1 h-1 rounded-full bg-[#8b7355] mt-2 flex-shrink-0" />
-                  <span className="text-sm text-[#9a9896]">Rozwój organizacji</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-1 h-1 rounded-full bg-[#8b7355] mt-2 flex-shrink-0" />
-                  <span className="text-sm text-[#9a9896]">Optymalizacja procesów</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-1 h-1 rounded-full bg-[#8b7355] mt-2 flex-shrink-0" />
-                  <span className="text-sm text-[#9a9896]">Zarządzanie zespołami</span>
-                </div>
+              <div className="flex items-start gap-4">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#6f7782] mt-2.5 flex-shrink-0" />
+                <span className="text-sm text-[#a4a2a0]">
+                  Rozwój organizacji
+                </span>
               </div>
+
+              <div className="flex items-start gap-4">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#6f7782] mt-2.5 flex-shrink-0" />
+                <span className="text-sm text-[#a4a2a0]">
+                  Optymalizacja procesów
+                </span>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#6f7782] mt-2.5 flex-shrink-0" />
+                <span className="text-sm text-[#a4a2a0]">
+                  Zarządzanie zespołami
+                </span>
+              </div>
+
             </div>
 
             {/* CTA */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-6">
-              
+            <div className="flex flex-col sm:flex-row gap-4 mt-14">
+
+              <a
                 href="#doswiadczenie"
-                className="inline-flex items-center justify-center px-8 py-3.5 bg-[#3a3838] text-[#e8e6e3] text-sm font-medium transition-colors duration-300 hover:bg-[#454343]"
+                className="inline-flex items-center justify-center px-8 py-3.5 bg-[#343941] text-[#f1efec] text-sm font-medium transition-all duration-300 hover:bg-[#40464f]"
               >
                 Doświadczenie zawodowe
               </a>
 
-              
+              <a
                 href="#kompetencje"
-                className="inline-flex items-center justify-center px-8 py-3.5 border border-[#3a3838] text-[#b8b6b3] text-sm font-medium transition-colors duration-300 hover:border-[#4a4848] hover:text-[#e8e6e3]"
+                className="inline-flex items-center justify-center px-8 py-3.5 border border-[#40454d] text-[#c4c1bd] text-sm font-medium transition-all duration-300 hover:border-[#545a63] hover:text-[#f1efec]"
               >
                 Zakres odpowiedzialności
               </a>
+
             </div>
           </motion.div>
 
-          {/* Kolumna profilu */}
+          {/* Prawa kolumna */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
             className="lg:col-span-5"
           >
-            {/* Kontener profilu */}
+
             <div className="space-y-8">
-              {/* Zdjęcie */}
-              <div className="relative">
-                <div className="relative aspect-[3/4] bg-[#323232] border border-[#3a3838]">
-                  {/* Placeholder */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center space-y-4">
-                      <div className="w-20 h-20 mx-auto rounded-full bg-[#3a3838] flex items-center justify-center">
-                        <svg className="w-10 h-10 text-[#5a5856]" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                        </svg>
-                      </div>
-                      <p className="text-xs text-[#6a6764]">Zdjęcie profilowe</p>
+
+              {/* Placeholder profile area */}
+              <div className="relative overflow-hidden border border-[#3a3f46] bg-[#2d3137] aspect-[3/4]">
+
+                {/* Subtle texture */}
+                <div className="absolute inset-0 opacity-[0.04]">
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,#ffffff,transparent_40%)]" />
+                </div>
+
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center">
+
+                    <div className="w-24 h-24 rounded-full border border-[#434850] bg-[#353a42] flex items-center justify-center mx-auto mb-6">
+                      <svg
+                        className="w-10 h-10 text-[#70757d]"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                        />
+                      </svg>
                     </div>
+
+                    <p className="text-xs tracking-wide uppercase text-[#6d7278]">
+                      Zdjęcie profilowe
+                    </p>
+
                   </div>
                 </div>
               </div>
 
-              {/* Kluczowe informacje */}
-              <div className="space-y-4 bg-[#323232] border border-[#3a3838] p-6">
-                <div className="space-y-4">
-                  <div className="flex justify-between items-baseline pb-3 border-b border-[#3a3838]">
-                    <span className="text-xs text-[#7a7876] tracking-wide uppercase">Doświadczenie</span>
-                    <span className="text-sm text-[#b8b6b3]">25+ lat</span>
+              {/* Summary card */}
+              <div className="border border-[#3a3f46] bg-[#2d3137] p-7">
+
+                <div className="space-y-5">
+
+                  <div className="flex items-center justify-between pb-4 border-b border-[#3a3f46]">
+                    <span className="text-xs uppercase tracking-wide text-[#7d8288]">
+                      Doświadczenie
+                    </span>
+
+                    <span className="text-sm text-[#d0cdca]">
+                      25+ lat
+                    </span>
                   </div>
-                  <div className="flex justify-between items-baseline pb-3 border-b border-[#3a3838]">
-                    <span className="text-xs text-[#7a7876] tracking-wide uppercase">Branże</span>
-                    <span className="text-sm text-[#b8b6b3]">Wielobranżowy</span>
+
+                  <div className="flex items-center justify-between pb-4 border-b border-[#3a3f46]">
+                    <span className="text-xs uppercase tracking-wide text-[#7d8288]">
+                      Zakres działań
+                    </span>
+
+                    <span className="text-sm text-[#d0cdca]">
+                      Operacje i rozwój
+                    </span>
                   </div>
-                  <div className="flex justify-between items-baseline pb-3 border-b border-[#3a3838]">
-                    <span className="text-xs text-[#7a7876] tracking-wide uppercase">Zakres</span>
-                    <span className="text-sm text-[#b8b6b3]">Polska i międzynarodowy</span>
+
+                  <div className="flex items-center justify-between pb-4 border-b border-[#3a3f46]">
+                    <span className="text-xs uppercase tracking-wide text-[#7d8288]">
+                      Środowisko pracy
+                    </span>
+
+                    <span className="text-sm text-[#d0cdca]">
+                      Organizacje wielooddziałowe
+                    </span>
                   </div>
-                  <div className="flex justify-between items-baseline">
-                    <span className="text-xs text-[#7a7876] tracking-wide uppercase">Specjalizacja</span>
-                    <span className="text-sm text-[#b8b6b3]">Operacje</span>
+
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs uppercase tracking-wide text-[#7d8288]">
+                      Specjalizacja
+                    </span>
+
+                    <span className="text-sm text-[#d0cdca]">
+                      Zarządzanie operacyjne
+                    </span>
                   </div>
+
                 </div>
+
               </div>
+
             </div>
+
           </motion.div>
 
         </div>
