@@ -29,7 +29,7 @@ export default function Hero() {
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-normal text-[#1f1f1f] leading-tight">
-                Imię Nazwisko
+                Wojciech Kaczanowski
               </h1>
 
               <p className="text-xl text-[#5c5c5c] font-light">
