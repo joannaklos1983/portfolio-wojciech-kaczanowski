@@ -43,9 +43,8 @@ export default function Hero() {
             {/* Opis */}
             <div className="space-y-5">
               <p className="max-w-xl text-base leading-relaxed text-[#4f4f4f]">
-                Budowanie efektywnych organizacji, rozwój zespołów i skalowanie
-                procesów biznesowych. Łączenie strategii, operacji i
-                odpowiedzialności za wynik.
+                Ponad 20 lat doświadczenia w branży FMCG w obszarze zarządzania operacyjnego, sprzedaży oraz organizacji pracy zespołów.
+                Doświadczenie w koordynacji działań, rozwoju struktur organizacyjnych i realizacji celów biznesowych w dynamicznym środowisku operacyjnym.
               </p>
             </div>
 
@@ -64,7 +63,7 @@ export default function Hero() {
                 <div className="h-1.5 w-1.5 rounded-full bg-[#8a8580]" />
 
                 <span className="text-sm text-[#666666]">
-                  Rozwój organizacji
+                  Rozwój struktur i zespołów
                 </span>
               </div>
 
@@ -72,7 +71,7 @@ export default function Hero() {
                 <div className="h-1.5 w-1.5 rounded-full bg-[#8a8580]" />
 
                 <span className="text-sm text-[#666666]">
-                  Optymalizacja procesów
+                  Organizacja procesów
                 </span>
               </div>
 
@@ -80,7 +79,7 @@ export default function Hero() {
                 <div className="h-1.5 w-1.5 rounded-full bg-[#8a8580]" />
 
                 <span className="text-sm text-[#666666]">
-                  Zarządzanie zespołami
+                  Realizacja celów biznesowych
                 </span>
               </div>
 
