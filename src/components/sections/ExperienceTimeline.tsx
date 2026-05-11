@@ -16,77 +16,59 @@ interface TimelineItem {
 const timelineData: TimelineItem[] = [
   {
     id: '1',
-    period: '2020 — obecnie',
-    position: 'Dyrektor Operacyjny',
-    company: 'Nazwa Firmy',
-    description:
-      'Odpowiedzialność za operacje i rozwój struktur w organizacji wielooddziałowej.',
+    period: '2016 — obecnie',
+    position: 'Dyrektor oddziału',
+    company: 'Grupa Kapitałowa SPECJAŁ',
+    description: 'Odpowiedzialność za zarządzanie operacyjne oddziału, organizację pracy zespołów oraz realizację celów biznesowych w dynamicznym środowisku FMCG.',
     responsibilities: [
-      'Planowanie działań operacyjnych',
-      'Zarządzanie budżetem operacyjnym',
-      'Rozwój procesów organizacyjnych',
-      'Budowanie zespołów menedżerskich',
-      'Nadzór nad projektami rozwojowymi',
+      'Zarządzanie operacyjne oddziału',
+      'Organizacja pracy zespołów',
+      'Realizacja celów sprzedażowych i operacyjnych',
+      'Usprawnianie procesów',
+      'Koordynacja działań',
+      'Współpraca między działami',
     ],
   },
   {
     id: '2',
-    period: '2015 — 2020',
-    position: 'Dyrektor Zarządzający',
-    company: 'Nazwa Firmy',
-    description:
-      'Rozwój operacji regionalnych i wdrażanie rozwiązań wspierających organizację.',
+    period: '2014 — 2016',
+    position: 'Dyrektor oddziału',
+    company: 'Bć-Pol S.A.',
+    description: 'Koordynacja działań operacyjnych oraz zarządzanie funkcjonowaniem oddziału w obszarze sprzedaży i organizacji pracy.',
     responsibilities: [
-      'Zarządzanie strukturą operacyjną',
-      'Optymalizacja kosztów',
-      'Rozwój modeli organizacyjnych',
-      'Koordynacja działań zespołów',
-      'Współpraca z partnerami biznesowymi',
+      'Organizacja działań operacyjnych',
+      'Zarządzanie zespołami',
+      'Realizacja działań sprzedażowych',
+      'Koordynacja procesów',
+      'Nadzór nad funkcjonowaniem oddziału',
     ],
   },
   {
     id: '3',
-    period: '2010 — 2015',
-    position: 'Kierownik Operacyjny',
-    company: 'Nazwa Firmy',
-    description:
-      'Nadzór nad procesami operacyjnymi i organizacją pracy zespołów.',
+    period: '2013 — 2014',
+    position: 'Regionalny kierownik sprzedaży',
+    company: 'Uroda Polska',
+    description: 'Rozwój sprzedaży regionalnej oraz koordynacja działań handlowych i zespołów sprzedażowych.',
     responsibilities: [
-      'Zarządzanie operacjami',
-      'Koordynacja procesów logistycznych',
-      'Wdrażanie standardów jakości',
-      'Rozwój kompetencji zespołów',
-      'Raportowanie wyników operacyjnych',
+      'Sprzedaż regionalna',
+      'Organizacja działań handlowych',
+      'Koordynacja zespołów',
+      'Realizacja celów sprzedażowych',
+      'Rozwój relacji biznesowych',
     ],
   },
   {
     id: '4',
-    period: '2005 — 2010',
-    position: 'Menedżer ds. Operacji',
-    company: 'Nazwa Firmy',
-    description:
-      'Koordynacja działań operacyjnych i wsparcie procesów organizacyjnych.',
+    period: '1999 — 2012',
+    position: 'Regionalny kierownik sprzedaży',
+    company: 'PepsiCo',
+    description: 'Rozwój kariery od stanowisk operacyjnych do zarządzania sprzedażą regionalną w strukturach międzynarodowej organizacji FMCG.',
     responsibilities: [
-      'Zarządzanie procesami operacyjnymi',
-      'Koordynacja projektów usprawniających',
-      'Monitoring efektywności działań',
-      'Współpraca między działami',
-      'Rozwój procedur operacyjnych',
-    ],
-  },
-  {
-    id: '5',
-    period: '1999 — 2005',
-    position: 'Specjalista ds. Operacyjnych',
-    company: 'Nazwa Firmy',
-    description:
-      'Wsparcie procesów organizacyjnych i udział w działaniach operacyjnych.',
-    responsibilities: [
-      'Wsparcie działań operacyjnych',
-      'Przygotowanie analiz i raportów',
-      'Udział w projektach usprawniających',
-      'Tworzenie dokumentacji',
-      'Wsparcie wdrożeń procesowych',
+      'Zarządzanie sprzedażą i operacjami',
+      'Organizacja transportu i logistyki',
+      'Koordynacja zespołów',
+      'Rozwój struktur regionalnych',
+      'Realizacja celów biznesowych',
     ],
   },
 ];
@@ -99,13 +81,8 @@ export default function ExperienceTimeline() {
   };
 
   return (
-    <section
-      id="doswiadczenie"
-      className="py-24 md:py-32 bg-[#f3f0eb]"
-    >
+    <section id="doswiadczenie" className="py-24 md:py-32 bg-[#f3f0eb]">
       <Container>
-
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -114,93 +91,63 @@ export default function ExperienceTimeline() {
           className="mb-16"
         >
           <div className="flex items-center gap-4 mb-4">
-            <span className="text-sm text-[#6a6a6a] font-medium">
+            <span className="text-xs text-[#6a6a6a] font-medium tracking-wider uppercase">
               Doświadczenie operacyjne
             </span>
-
             <div className="flex-1 h-px bg-[#d5d0c7]" />
           </div>
-
-          <h2 className="text-4xl md:text-5xl font-display font-normal text-[#1f1f1f]">
+          <h2 className="text-4xl md:text-5xl font-display font-normal text-[#1a1a1a]">
             Doświadczenie zawodowe
           </h2>
         </motion.div>
 
-        {/* Timeline */}
         <div className="relative">
-
-          {/* Vertical line */}
           <div className="absolute left-0 top-0 bottom-0 w-px bg-[#d5d0c7]" />
 
           <div className="space-y-0">
-
             {timelineData.map((item, index) => (
               <motion.div
                 key={item.id}
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{
-                  duration: 0.5,
-                  delay: index * 0.08,
-                }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="relative pl-12 pb-12 last:pb-0"
               >
-
-                {/* Timeline dot */}
                 <div className="absolute left-0 top-2 w-2 h-2 -translate-x-[3.5px]">
-                  <div className="w-full h-full rounded-full bg-[#8a8580]" />
+                  <div className="w-full h-full bg-[#8a8580] rounded-full" />
                 </div>
 
-                {/* Card */}
-                <div className="border border-[#d5d0c7] bg-white transition-all duration-300 hover:border-[#c5c1ba]">
-
+                <div className="border border-[#d5d0c7] bg-[#ffffff] transition-all duration-300 hover:border-[#c5c1ba] hover:shadow-sm">
                   <button
                     onClick={() => toggleItem(item.id)}
-                    aria-expanded={expandedId === item.id}
-                    className="w-full px-6 py-6 text-left"
+                    className="w-full px-6 py-5 text-left"
                   >
-
-                    <div className="space-y-4">
-
-                      {/* Period */}
+                    <div className="space-y-3">
                       <div className="flex items-center gap-3">
-
-                        <span className="text-xs uppercase tracking-wide text-[#7a7670]">
+                        <span className="text-xs font-medium tracking-wider text-[#6a6a6a] uppercase">
                           {item.period}
                         </span>
-
-                        <div className="flex-1 h-px bg-[#ece8e1]" />
-
+                        <div className="flex-1 h-px bg-[#e7e3dc]" />
                       </div>
 
-                      {/* Position */}
                       <div className="space-y-1">
-
-                        <h3 className="text-2xl md:text-3xl font-display font-normal text-[#1f1f1f]">
+                        <h3 className="text-2xl md:text-3xl font-display font-normal text-[#1a1a1a]">
                           {item.position}
                         </h3>
-
                         <p className="text-sm text-[#6a6a6a]">
                           {item.company}
                         </p>
-
                       </div>
 
-                      {/* Description */}
-                      <p className="text-[#4f4f4f] leading-relaxed max-w-3xl">
+                      <p className="text-[#4a4a4a] leading-relaxed">
                         {item.description}
                       </p>
 
-                      {/* Toggle */}
-                      <div className="flex items-center gap-2 pt-2 text-xs text-[#8a8580]">
-
-                        <span className="uppercase tracking-wide font-medium">
-                          {expandedId === item.id
-                            ? 'Zwiń szczegóły'
-                            : 'Zobacz szczegóły'}
+                      <div className="flex items-center gap-2 text-xs text-[#8a8580] pt-2">
+                        <span className="font-medium tracking-wide uppercase">
+                          {expandedId === item.id ? 'Zwiń' : 'Zobacz szczegóły'}
                         </span>
-
                         <svg
                           className={`w-4 h-4 transition-transform duration-300 ${
                             expandedId === item.id ? 'rotate-180' : ''
@@ -216,16 +163,11 @@ export default function ExperienceTimeline() {
                             d="M19 9l-7 7-7-7"
                           />
                         </svg>
-
                       </div>
-
                     </div>
-
                   </button>
 
-                  {/* Expandable content */}
                   <AnimatePresence>
-
                     {expandedId === item.id && (
                       <motion.div
                         initial={{ height: 0, opacity: 0 }}
@@ -234,56 +176,68 @@ export default function ExperienceTimeline() {
                         transition={{ duration: 0.3 }}
                         className="overflow-hidden"
                       >
-
-                        <div className="px-6 pb-6 pt-4 border-t border-[#ece8e1]">
-
-                          <h4 className="text-xs uppercase tracking-wide text-[#6a6a6a] font-medium mb-5">
-                            Zakres odpowiedzialności
+                        <div className="px-6 pb-5 pt-2 border-t border-[#e7e3dc]">
+                          <h4 className="text-xs font-medium text-[#6a6a6a] mb-4 tracking-wide uppercase">
+                            Kluczowe obszary
                           </h4>
-
                           <ul className="space-y-3">
-
-                            {item.responsibilities.map(
-                              (responsibility, idx) => (
-                                <motion.li
-                                  key={idx}
-                                  initial={{ opacity: 0, x: -10 }}
-                                  animate={{ opacity: 1, x: 0 }}
-                                  transition={{
-                                    duration: 0.25,
-                                    delay: idx * 0.04,
-                                  }}
-                                  className="flex items-start gap-3 text-[#4f4f4f]"
-                                >
-
-                                  <span className="mt-1.5 text-[#8a8580]">
-                                    —
-                                  </span>
-
-                                  <span>{responsibility}</span>
-
-                                </motion.li>
-                              )
-                            )}
-
+                            {item.responsibilities.map((responsibility, idx) => (
+                              <motion.li
+                                key={idx}
+                                initial={{ opacity: 0, x: -10 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.3, delay: idx * 0.05 }}
+                                className="flex items-start gap-3 text-[#4a4a4a]"
+                              >
+                                <span className="text-[#8a8580] mt-1.5 flex-shrink-0">—</span>
+                                <span>{responsibility}</span>
+                              </motion.li>
+                            ))}
                           </ul>
-
                         </div>
-
                       </motion.div>
                     )}
-
                   </AnimatePresence>
-
                 </div>
-
               </motion.div>
             ))}
-
           </div>
-
         </div>
 
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="mt-16 pt-10 border-t border-[#d5d0c7]"
+        >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="space-y-2">
+              <div className="text-4xl font-display font-normal text-[#1a1a1a]">
+                20+
+              </div>
+              <div className="text-sm text-[#6a6a6a]">
+                Lat w branży FMCG
+              </div>
+            </div>
+            <div className="space-y-2">
+              <div className="text-4xl font-display font-normal text-[#1a1a1a]">
+                4
+              </div>
+              <div className="text-sm text-[#6a6a6a]">
+                Organizacje o różnej skali
+              </div>
+            </div>
+            <div className="space-y-2">
+              <div className="text-4xl font-display font-normal text-[#1a1a1a]">
+                13
+              </div>
+              <div className="text-sm text-[#6a6a6a]">
+                Lat w PepsiCo
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </Container>
     </section>
   );
