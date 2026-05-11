@@ -1,33 +1,16 @@
-import type { Metadata } from 'next'
-import { Inter, Cormorant_Garamond } from 'next/font/google'
-import './globals.css'
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-sans',
-})
-
-const cormorant = Cormorant_Garamond({
-  subsets: ['latin'],
-  variable: '--font-display',
-  weight: ['300', '400', '500', '600'],
-})
-
-export const metadata: Metadata = {
-  title: 'Wojciech Kaczanowski | Executive Portfolio',
-  description: 'Premium executive portfolio built with Next.js 15',
-}
+import Navbar from '@/components/layout/Navbar';
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en">
-      <body className={`${inter.variable} ${cormorant.variable} antialiased`}>
+    <html lang="pl">
+      <body className={`${cormorant.variable} ${inter.variable}`}>
+        <Navbar />
         {children}
       </body>
     </html>
-  )
+  );
 }
