@@ -43,9 +43,7 @@ export default function Hero() {
             {/* Opis */}
             <div className="space-y-5">
               <p className="max-w-xl text-base leading-relaxed text-[#4f4f4f]">
-                Budowanie efektywnych organizacji, rozwój zespołów i skalowanie
-                procesów biznesowych. Łączenie strategii, operacji i
-                odpowiedzialności za wynik.
+               Doświadczenie w zarządzaniu oddziałami, organizacji pracy zespołów oraz realizacji celów sprzedażowych w środowisku FMCG.
               </p>
             </div>
 
