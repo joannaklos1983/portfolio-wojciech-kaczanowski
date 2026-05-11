@@ -28,7 +28,7 @@ const competencies = [
 
 export default function Competencies() {
   return (
-    <section id="kompetencje" className="py-24 md:py-32 bg-[#ffffff]">
+    <section id="kompetencje" className="py-24 md:py-32 bg-[#f8f5f1] border-t border-[#ece8e1]">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
