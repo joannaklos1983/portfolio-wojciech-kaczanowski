@@ -19,13 +19,14 @@ const timelineData: TimelineItem[] = [
     period: '2020 — obecnie',
     position: 'Dyrektor Operacyjny',
     company: 'Nazwa Firmy',
-    description: 'Nadzór nad operacjami w organizacji międzynarodowej. Zarządzanie zespołem 200+ osób w strukturze wielooddziałowej.',
+    description:
+      'Odpowiedzialność za operacje i rozwój struktur w organizacji wielooddziałowej.',
     responsibilities: [
-      'Planowanie i realizacja strategii operacyjnej',
+      'Planowanie działań operacyjnych',
       'Zarządzanie budżetem operacyjnym',
-      'Rozwój i optymalizacja procesów biznesowych',
-      'Budowanie i rozwój zespołów menedżerskich',
-      'Nadzór nad projektami transformacji organizacyjnej',
+      'Rozwój procesów organizacyjnych',
+      'Budowanie zespołów menedżerskich',
+      'Nadzór nad projektami rozwojowymi',
     ],
   },
   {
@@ -33,13 +34,14 @@ const timelineData: TimelineItem[] = [
     period: '2015 — 2020',
     position: 'Dyrektor Zarządzający',
     company: 'Nazwa Firmy',
-    description: 'Rozwój i skalowanie operacji regionalnych. Wdrożenie systemów wspierających wzrost organizacji.',
+    description:
+      'Rozwój operacji regionalnych i wdrażanie rozwiązań wspierających organizację.',
     responsibilities: [
-      'Kierowanie zespołem 150+ osób',
-      'Wprowadzenie nowych modeli operacyjnych',
-      'Optymalizacja kosztów i procesów',
-      'Rozwój struktury organizacyjnej',
-      'Budowanie relacji z kluczowymi partnerami',
+      'Zarządzanie strukturą operacyjną',
+      'Optymalizacja kosztów',
+      'Rozwój modeli organizacyjnych',
+      'Koordynacja działań zespołów',
+      'Współpraca z partnerami biznesowymi',
     ],
   },
   {
@@ -47,11 +49,12 @@ const timelineData: TimelineItem[] = [
     period: '2010 — 2015',
     position: 'Kierownik Operacyjny',
     company: 'Nazwa Firmy',
-    description: 'Zarządzanie operacjami w środowisku produkcyjno-logistycznym. Optymalizacja procesów i rozwój zespołów.',
+    description:
+      'Nadzór nad procesami operacyjnymi i organizacją pracy zespołów.',
     responsibilities: [
-      'Nadzór nad operacjami produkcyjnymi',
-      'Zarządzanie łańcuchem dostaw',
-      'Implementacja systemów jakości',
+      'Zarządzanie operacjami',
+      'Koordynacja procesów logistycznych',
+      'Wdrażanie standardów jakości',
       'Rozwój kompetencji zespołów',
       'Raportowanie wyników operacyjnych',
     ],
@@ -61,12 +64,13 @@ const timelineData: TimelineItem[] = [
     period: '2005 — 2010',
     position: 'Menedżer ds. Operacji',
     company: 'Nazwa Firmy',
-    description: 'Koordynacja operacji i procesów biznesowych. Nadzór nad zespołami operacyjnymi.',
+    description:
+      'Koordynacja działań operacyjnych i wsparcie procesów organizacyjnych.',
     responsibilities: [
-      'Koordynacja działań operacyjnych',
-      'Zarządzanie projektami usprawnieniowymi',
-      'Monitoring wskaźników efektywności',
-      'Współpraca z działami wsparcia',
+      'Zarządzanie procesami operacyjnymi',
+      'Koordynacja projektów usprawniających',
+      'Monitoring efektywności działań',
+      'Współpraca między działami',
       'Rozwój procedur operacyjnych',
     ],
   },
@@ -75,13 +79,14 @@ const timelineData: TimelineItem[] = [
     period: '1999 — 2005',
     position: 'Specjalista ds. Operacyjnych',
     company: 'Nazwa Firmy',
-    description: 'Wsparcie operacyjne i zarządzanie projektami. Rozwój kompetencji w zakresie procesów biznesowych.',
+    description:
+      'Wsparcie procesów organizacyjnych i udział w działaniach operacyjnych.',
     responsibilities: [
-      'Wsparcie procesów operacyjnych',
-      'Przygotowanie raportów i analiz',
-      'Udział w projektach usprawnieniowych',
-      'Dokumentacja procesów',
-      'Szkolenie pracowników',
+      'Wsparcie działań operacyjnych',
+      'Przygotowanie analiz i raportów',
+      'Udział w projektach usprawniających',
+      'Tworzenie dokumentacji',
+      'Wsparcie wdrożeń procesowych',
     ],
   },
 ];
@@ -94,8 +99,13 @@ export default function ExperienceTimeline() {
   };
 
   return (
-    <section id="doswiadczenie" className="py-24 md:py-32 bg-[#f3f0eb]">
+    <section
+      id="doswiadczenie"
+      className="py-24 md:py-32 bg-[#f3f0eb]"
+    >
       <Container>
+
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -104,64 +114,93 @@ export default function ExperienceTimeline() {
           className="mb-16"
         >
           <div className="flex items-center gap-4 mb-4">
-            <span className="text-xs text-[#6a6a6a] font-medium tracking-wider uppercase">
-              Ścieżka kariery
+            <span className="text-sm text-[#6a6a6a] font-medium">
+              Doświadczenie operacyjne
             </span>
+
             <div className="flex-1 h-px bg-[#d5d0c7]" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-display font-normal text-[#1a1a1a]">
+
+          <h2 className="text-4xl md:text-5xl font-display font-normal text-[#1f1f1f]">
             Doświadczenie zawodowe
           </h2>
         </motion.div>
 
+        {/* Timeline */}
         <div className="relative">
+
+          {/* Vertical line */}
           <div className="absolute left-0 top-0 bottom-0 w-px bg-[#d5d0c7]" />
 
           <div className="space-y-0">
+
             {timelineData.map((item, index) => (
               <motion.div
                 key={item.id}
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.08,
+                }}
                 className="relative pl-12 pb-12 last:pb-0"
               >
+
+                {/* Timeline dot */}
                 <div className="absolute left-0 top-2 w-2 h-2 -translate-x-[3.5px]">
-                  <div className="w-full h-full bg-[#8a8580] rounded-full" />
-                  <div className="absolute inset-0 bg-[#8a8580] rounded-full animate-ping opacity-20" />
+                  <div className="w-full h-full rounded-full bg-[#8a8580]" />
                 </div>
 
-                <div className="border border-[#d5d0c7] bg-[#ffffff] transition-all duration-300 hover:border-[#c5c1ba] hover:shadow-sm">
+                {/* Card */}
+                <div className="border border-[#d5d0c7] bg-white transition-all duration-300 hover:border-[#c5c1ba]">
+
                   <button
                     onClick={() => toggleItem(item.id)}
-                    className="w-full px-6 py-5 text-left"
+                    aria-expanded={expandedId === item.id}
+                    className="w-full px-6 py-6 text-left"
                   >
-                    <div className="space-y-3">
+
+                    <div className="space-y-4">
+
+                      {/* Period */}
                       <div className="flex items-center gap-3">
-                        <span className="text-xs font-medium tracking-wider text-[#6a6a6a] uppercase">
+
+                        <span className="text-xs uppercase tracking-wide text-[#7a7670]">
                           {item.period}
                         </span>
-                        <div className="flex-1 h-px bg-[#e7e3dc]" />
+
+                        <div className="flex-1 h-px bg-[#ece8e1]" />
+
                       </div>
 
+                      {/* Position */}
                       <div className="space-y-1">
-                        <h3 className="text-2xl md:text-3xl font-display font-normal text-[#1a1a1a]">
+
+                        <h3 className="text-2xl md:text-3xl font-display font-normal text-[#1f1f1f]">
                           {item.position}
                         </h3>
+
                         <p className="text-sm text-[#6a6a6a]">
                           {item.company}
                         </p>
+
                       </div>
 
-                      <p className="text-[#4a4a4a] leading-relaxed">
+                      {/* Description */}
+                      <p className="text-[#4f4f4f] leading-relaxed max-w-3xl">
                         {item.description}
                       </p>
 
-                      <div className="flex items-center gap-2 text-xs text-[#8a8580] pt-2">
-                        <span className="font-medium tracking-wide uppercase">
-                          {expandedId === item.id ? 'Zwiń' : 'Zobacz szczegóły'}
+                      {/* Toggle */}
+                      <div className="flex items-center gap-2 pt-2 text-xs text-[#8a8580]">
+
+                        <span className="uppercase tracking-wide font-medium">
+                          {expandedId === item.id
+                            ? 'Zwiń szczegóły'
+                            : 'Zobacz szczegóły'}
                         </span>
+
                         <svg
                           className={`w-4 h-4 transition-transform duration-300 ${
                             expandedId === item.id ? 'rotate-180' : ''
@@ -177,11 +216,16 @@ export default function ExperienceTimeline() {
                             d="M19 9l-7 7-7-7"
                           />
                         </svg>
+
                       </div>
+
                     </div>
+
                   </button>
 
+                  {/* Expandable content */}
                   <AnimatePresence>
+
                     {expandedId === item.id && (
                       <motion.div
                         initial={{ height: 0, opacity: 0 }}
@@ -190,12 +234,57 @@ export default function ExperienceTimeline() {
                         transition={{ duration: 0.3 }}
                         className="overflow-hidden"
                       >
-                        <div className="px-6 pb-5 pt-2 border-t border-[#e7e3dc]">
-                          <h4 className="text-xs font-medium text-[#6a6a6a] mb-4 tracking-wide uppercase">
+
+                        <div className="px-6 pb-6 pt-4 border-t border-[#ece8e1]">
+
+                          <h4 className="text-xs uppercase tracking-wide text-[#6a6a6a] font-medium mb-5">
                             Zakres odpowiedzialności
                           </h4>
+
                           <ul className="space-y-3">
-                            {item.responsibilities.map((responsibility, idx) => (
-                              <motion.li
-                                key={idx}
-                                initial={{ opacity:
+
+                            {item.responsibilities.map(
+                              (responsibility, idx) => (
+                                <motion.li
+                                  key={idx}
+                                  initial={{ opacity: 0, x: -10 }}
+                                  animate={{ opacity: 1, x: 0 }}
+                                  transition={{
+                                    duration: 0.25,
+                                    delay: idx * 0.04,
+                                  }}
+                                  className="flex items-start gap-3 text-[#4f4f4f]"
+                                >
+
+                                  <span className="mt-1.5 text-[#8a8580]">
+                                    —
+                                  </span>
+
+                                  <span>{responsibility}</span>
+
+                                </motion.li>
+                              )
+                            )}
+
+                          </ul>
+
+                        </div>
+
+                      </motion.div>
+                    )}
+
+                  </AnimatePresence>
+
+                </div>
+
+              </motion.div>
+            ))}
+
+          </div>
+
+        </div>
+
+      </Container>
+    </section>
+  );
+}
