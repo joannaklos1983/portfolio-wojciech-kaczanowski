@@ -28,27 +28,27 @@ const competencies = [
 
 export default function Competencies() {
   return (
-    <section id="kompetencje" className="py-24 md:py-32 bg-[#f8f5f1] border-t border-[#ece8e1]">
+    <section id="kompetencje" className="py-16 md:py-24 lg:py-32 bg-[#f8f5f1] border-t border-[#ece8e1]">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-16"
+          className="mb-10 md:mb-16"
         >
-          <div className="flex items-center gap-4 mb-4">
+          <div className="flex items-center gap-4 mb-3 md:mb-4">
             <span className="text-xs text-[#6a6a6a] font-medium tracking-wider uppercase">
               Obszary doświadczenia
             </span>
             <div className="flex-1 h-px bg-[#d5d0c7]" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-display font-normal text-[#1a1a1a]">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-normal text-[#1a1a1a]">
             Kluczowe kompetencje
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
           {competencies.map((item, index) => (
             <motion.div
               key={item.id}
@@ -58,10 +58,10 @@ export default function Competencies() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group"
             >
-              <div className="h-full border border-[#e7e3dc] bg-[#fafaf9] p-8 transition-all duration-300 hover:border-[#c5c1ba] hover:shadow-sm">
-                <div className="space-y-4">
+              <div className="h-full border border-[#e7e3dc] bg-[#fafaf9] p-6 md:p-8 transition-all duration-300 hover:border-[#c5c1ba] hover:shadow-sm">
+                <div className="space-y-3 md:space-y-4">
                   <div className="flex items-start justify-between">
-                    <h3 className="text-xl font-display font-normal text-[#1a1a1a]">
+                    <h3 className="text-lg md:text-xl font-display font-normal text-[#1a1a1a]">
                       {item.title}
                     </h3>
                     <div className="w-1.5 h-1.5 rounded-full bg-[#8a8580] mt-2 opacity-40 group-hover:opacity-100 transition-opacity duration-300" />
