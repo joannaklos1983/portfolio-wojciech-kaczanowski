@@ -1,18 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
   --font-display: 'Cormorant Garamond', serif;
-  --font-sans: 'Inter', sans-serif;
-
-  --cream: #f5f1eb;
-  --warm-beige: #e8dfd4;
-  --soft-taupe: #c9bfb3;
-  --warm-gray: #8a8176;
-  --graphite: #2a2823;
-  --deep-charcoal: #1a1816;
-
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  /* Executive operational palette - dark sophisticated */
+  --graphite: #2a2a2a;
+  --charcoal: #1a1a1a;
+  --anthracite: #3a3838;
+  --steel-gray: #5a5856;
+  --warm-gray: #6a6764;
+  --bronze: #8b7355;
+  --champagne: #9d8b7a;
+  --off-white: #e8e6e3;
+  
+  /* Spacing scale - executive rhythm */
   --space-section: 10rem;
   --space-section-sm: 6rem;
 }
@@ -23,51 +29,68 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-
+  
   body {
-    @apply bg-[#f5f1eb] text-[#2a2823] antialiased;
-    font-family: var(--font-sans);
+    @apply bg-[#1a1a1a] text-[#e8e6e3] antialiased font-sans;
     font-feature-settings: 'kern' 1, 'liga' 1;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: var(--font-display);
-    @apply font-light text-[#1a1816];
-    letter-spacing: -0.02em;
+  /* Typography hierarchy */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-light text-[#e8e6e3];
     text-wrap: balance;
+    letter-spacing: -0.015em;
   }
 
   h1 {
-    @apply text-5xl md:text-6xl lg:text-7xl leading-tight;
+    @apply text-5xl md:text-6xl lg:text-7xl;
+    line-height: 1.1;
+    font-weight: 400;
   }
 
   h2 {
     @apply text-4xl md:text-5xl lg:text-6xl;
+    line-height: 1.15;
+  }
+
+  h3 {
+    @apply text-3xl md:text-4xl;
+    line-height: 1.25;
+  }
+
+  h4 {
+    @apply text-2xl md:text-3xl;
+    line-height: 1.3;
   }
 
   p {
-    @apply leading-relaxed;
+    @apply leading-relaxed text-[#b8b6b3];
   }
 }
 
+/* Minimal scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--cream);
+  @apply bg-[#1a1a1a];
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--soft-taupe);
+  @apply bg-[#3a3838];
 }
 
+/* Text selection */
 ::selection {
-  background: var(--warm-beige);
-  color: var(--deep-charcoal);
+  @apply bg-[#8b7355]/20 text-[#e8e6e3];
+}
+
+::-moz-selection {
+  @apply bg-[#8b7355]/20 text-[#e8e6e3];
+}
+
+/* Focus */
+:focus-visible {
+  @apply outline-none ring-1 ring-[#5a5856] ring-offset-2 ring-offset-[#1a1a1a];
 }
