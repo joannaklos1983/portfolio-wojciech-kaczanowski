@@ -7,22 +7,22 @@ import Container from '@/components/layout/Container';
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden bg-[#f3f0eb] py-24 md:py-32">
+    <section className="relative flex items-center overflow-hidden bg-[#f3f0eb] py-20 md:py-24">
       <Container className="relative z-10">
-        <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-12">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
 
           {/* Lewa kolumna */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="space-y-10 lg:col-span-7"
+            className="space-y-8 lg:col-span-7"
           >
 
             {/* Nagłówek */}
             <div className="space-y-3">
 
-              <div className="mb-6 flex items-center gap-4">
+              <div className="mb-4 flex items-center gap-4">
                 <span className="text-sm font-medium text-[#6a6a6a]">
                   FMCG • Sprzedaż • Zarządzanie oddziałami
                 </span>
@@ -34,27 +34,27 @@ export default function Hero() {
                 Wojciech Kaczanowski
               </h1>
 
-              <p className="text-xl font-light text-[#5c5c5c]">
-               Zarządzanie sprzedażą i organizacją pracy zespołów
+              <p className="text-lg font-light text-[#5c5c5c] md:text-xl">
+                Zarządzanie sprzedażą i organizacją pracy zespołów
               </p>
 
             </div>
 
             {/* Opis */}
-            <div className="space-y-5">
+            <div>
               <p className="max-w-xl text-base leading-relaxed text-[#4f4f4f]">
-               Doświadczenie w zarządzaniu oddziałami, organizacji pracy zespołów oraz realizacji celów sprzedażowych w środowisku FMCG.
+                Doświadczenie w zarządzaniu oddziałami, organizacji pracy zespołów oraz realizacji celów sprzedażowych w środowisku FMCG.
               </p>
             </div>
 
             {/* Kompetencje */}
-            <div className="grid max-w-2xl grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
+            <div className="grid max-w-2xl grid-cols-1 gap-x-8 gap-y-3 sm:grid-cols-2">
 
               <div className="flex items-center gap-3">
                 <div className="h-1.5 w-1.5 rounded-full bg-[#8a8580]" />
 
                 <span className="text-sm text-[#666666]">
-                  Zarządzanie operacyjne
+                  Zarządzanie oddziałami
                 </span>
               </div>
 
@@ -62,7 +62,7 @@ export default function Hero() {
                 <div className="h-1.5 w-1.5 rounded-full bg-[#8a8580]" />
 
                 <span className="text-sm text-[#666666]">
-                  Rozwój organizacji
+                  Koordynacja działań
                 </span>
               </div>
 
@@ -70,7 +70,7 @@ export default function Hero() {
                 <div className="h-1.5 w-1.5 rounded-full bg-[#8a8580]" />
 
                 <span className="text-sm text-[#666666]">
-                  Optymalizacja procesów
+                  Organizacja pracy zespołów
                 </span>
               </div>
 
@@ -78,14 +78,14 @@ export default function Hero() {
                 <div className="h-1.5 w-1.5 rounded-full bg-[#8a8580]" />
 
                 <span className="text-sm text-[#666666]">
-                  Zarządzanie zespołami
+                  Sprzedaż i realizacja celów
                 </span>
               </div>
 
             </div>
 
             {/* CTA */}
-            <div className="flex flex-col gap-3 pt-4 sm:flex-row">
+            <div className="flex flex-col gap-3 pt-2 sm:flex-row">
 
               <a
                 href="#doswiadczenie"
@@ -113,7 +113,7 @@ export default function Hero() {
             className="lg:col-span-5"
           >
 
-            <div className="space-y-6">
+            <div className="space-y-5">
 
               {/* Zdjęcie */}
               <div className="relative aspect-[3/4] overflow-hidden border border-[#d5d0c7] bg-[#ece8e1]">
@@ -127,7 +127,7 @@ export default function Hero() {
               </div>
 
               {/* Informacje */}
-              <div className="border border-[#d5d0c7] bg-[#ece8e1] p-6">
+              <div className="border border-[#d5d0c7] bg-[#ece8e1] p-5">
 
                 <div className="space-y-4">
 
@@ -147,7 +147,7 @@ export default function Hero() {
                     </span>
 
                     <span className="text-sm text-[#2a2a2a]">
-                      Operacje i rozwój
+                      Operacje i sprzedaż
                     </span>
                   </div>
 
@@ -163,11 +163,11 @@ export default function Hero() {
 
                   <div className="flex items-baseline justify-between">
                     <span className="text-xs uppercase tracking-wide text-[#7a7670]">
-                      Specjalizacja
+                      Zespoły
                     </span>
 
                     <span className="text-sm text-[#2a2a2a]">
-                      Zarządzanie operacyjne
+                      100+ osób
                     </span>
                   </div>
 
