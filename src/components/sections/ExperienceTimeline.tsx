@@ -88,7 +88,7 @@ export default function ExperienceTimeline() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-16"
+          className="mb-20"
         >
           <div className="flex items-center gap-4 mb-4">
             <span className="text-xs text-[#6a6a6a] font-medium tracking-wider uppercase">
@@ -96,9 +96,45 @@ export default function ExperienceTimeline() {
             </span>
             <div className="flex-1 h-px bg-[#d5d0c7]" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-display font-normal text-[#1a1a1a]">
+          <h2 className="text-4xl md:text-5xl font-display font-normal text-[#1a1a1a] mb-12">
             Doświadczenie zawodowe
           </h2>
+
+          {/* Metryki na górze */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 pb-4 border-t border-[#e7e3dc]">
+            <div className="space-y-2">
+              <div className="text-4xl font-display font-normal text-[#1a1a1a]">
+                20+
+              </div>
+              <div className="text-sm text-[#6a6a6a]">
+                Lat w branży FMCG
+              </div>
+            </div>
+            <div className="space-y-2">
+              <div className="text-4xl font-display font-normal text-[#1a1a1a]">
+                100+
+              </div>
+              <div className="text-sm text-[#6a6a6a]">
+                Osób w zespołach
+              </div>
+            </div>
+            <div className="space-y-2">
+              <div className="text-4xl font-display font-normal text-[#1a1a1a]">
+                4
+              </div>
+              <div className="text-sm text-[#6a6a6a]">
+                Organizacje różnej skali
+              </div>
+            </div>
+            <div className="space-y-2">
+              <div className="text-4xl font-display font-normal text-[#1a1a1a]">
+                13
+              </div>
+              <div className="text-sm text-[#6a6a6a]">
+                Lat w PepsiCo
+              </div>
+            </div>
+          </div>
         </motion.div>
 
         <div className="relative">
@@ -203,41 +239,6 @@ export default function ExperienceTimeline() {
             ))}
           </div>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-16 pt-10 border-t border-[#d5d0c7]"
-        >
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="space-y-2">
-              <div className="text-4xl font-display font-normal text-[#1a1a1a]">
-                25+
-              </div>
-              <div className="text-sm text-[#6a6a6a]">
-               Lat doświadczenia w FMCG
-              </div>
-            </div>
-            <div className="space-y-2">
-              <div className="text-4xl font-display font-normal text-[#1a1a1a]">
-                4
-              </div>
-              <div className="text-sm text-[#6a6a6a]">
-                Organizacje i struktury sprzedażowe
-              </div>
-            </div>
-            <div className="space-y-2">
-              <div className="text-4xl font-display font-normal text-[#1a1a1a]">
-                100+
-              </div>
-              <div className="text-sm text-[#6a6a6a]">
-               Osób w strukturach zespołowych
-              </div>
-            </div>
-          </div>
-        </motion.div>
       </Container>
     </section>
   );
