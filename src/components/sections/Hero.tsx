@@ -24,7 +24,7 @@ export default function Hero() {
 
               <div className="mb-6 flex items-center gap-4">
                 <span className="text-sm font-medium text-[#6a6a6a]">
-                  Zarządzanie operacyjne • Organizacja pracy • Rozwój firmy
+                  Operacje • Sprzedaż • Rozwój organizacji
                 </span>
 
                 <div className="h-px flex-1 bg-[#d5d0c7]" />
@@ -35,7 +35,7 @@ export default function Hero() {
               </h1>
 
               <p className="text-xl font-light text-[#5c5c5c]">
-                Manager i lider operacyjny
+               Zarządzanie operacyjne i rozwój organizacji
               </p>
 
             </div>
@@ -43,8 +43,8 @@ export default function Hero() {
             {/* Opis */}
             <div className="space-y-5">
               <p className="max-w-xl text-base leading-relaxed text-[#4f4f4f]">
-                Ponad 20 lat doświadczenia w branży FMCG w obszarze zarządzania operacyjnego, sprzedaży oraz organizacji pracy zespołów.
-                Doświadczenie w koordynacji działań, rozwoju struktur organizacyjnych i realizacji celów biznesowych w dynamicznym środowisku operacyjnym.
+                Ponad 20 lat doświadczenia w branży FMCG w obszarze zarządzania, sprzedaży oraz organizacji pracy zespołów.
+                Doświadczenie w koordynacji działań, rozwoju struktur organizacyjnych i realizacji celów biznesowych w dynamicznym środowisku biznesowym.
               </p>
             </div>
 
