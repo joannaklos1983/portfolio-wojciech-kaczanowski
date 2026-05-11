@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Container from '@/components/layout/Container';
 
@@ -21,13 +21,21 @@ export default function Navbar() {
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
+
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+
       setIsMobileMenuOpen(false);
     }
   };
@@ -35,30 +43,34 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed left-0 right-0 top-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? 'bg-[#f5f2ec]/95 backdrop-blur-sm border-b border-[#e7e3dc] shadow-sm'
+            ? 'border-b border-[#e7e3dc] bg-[#f5f2ec]/95 shadow-sm backdrop-blur-sm'
             : 'bg-transparent'
         }`}
       >
         <Container>
           <div className="flex items-center justify-between py-4 md:py-5">
-            {/* Logo/Name */}
-            
+            {/* Logo / Name */}
+            <a
               href="#"
               onClick={(e) => {
                 e.preventDefault();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+
+                window.scrollTo({
+                  top: 0,
+                  behavior: 'smooth',
+                });
               }}
-              className="font-display text-xl md:text-2xl font-normal text-[#1f1f1f] transition-colors hover:text-[#4a4a4a]"
+              className="font-display text-xl font-normal text-[#1f1f1f] transition-colors hover:text-[#4a4a4a] md:text-2xl"
             >
               WK
             </a>
 
             {/* Desktop Menu */}
-            <div className="hidden md:flex items-center gap-8">
+            <div className="hidden items-center gap-8 md:flex">
               {navLinks.map((link) => (
-                
+                <a
                   key={link.href}
                   href={link.href}
                   onClick={(e) => {
@@ -75,11 +87,11 @@ export default function Navbar() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 text-[#4a4a4a]"
+              className="p-2 text-[#4a4a4a] md:hidden"
               aria-label="Toggle menu"
             >
               <svg
-                className="w-6 h-6"
+                className="h-6 w-6"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
@@ -125,7 +137,7 @@ export default function Navbar() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className="text-2xl font-display font-normal text-[#1f1f1f] border-b border-[#e7e3dc] pb-4"
+                  className="border-b border-[#e7e3dc] pb-4 font-display text-2xl font-normal text-[#1f1f1f]"
                 >
                   {link.label}
                 </motion.a>
