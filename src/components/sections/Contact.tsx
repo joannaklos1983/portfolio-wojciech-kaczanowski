@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-
 import Container from '@/components/layout/Container';
 
 const contactInfo = [
@@ -31,7 +30,7 @@ export default function Contact() {
   return (
     <section
       id="kontakt"
-      className="border-t border-[#ece8e1] bg-[#f8f5f1] py-24 md:py-32"
+      className="border-t border-[#ece8e1] bg-[#f8f5f1] py-16 md:py-24 lg:py-32"
     >
       <Container>
         <motion.div
@@ -42,30 +41,29 @@ export default function Contact() {
           className="mx-auto max-w-4xl"
         >
           {/* Header */}
-          <div className="mb-12 flex items-center gap-4">
+          <div className="mb-8 md:mb-12 flex items-center gap-4">
             <span className="text-xs font-medium uppercase tracking-wider text-[#6a6a6a]">
               Kontakt
             </span>
-
             <div className="h-px flex-1 bg-[#d5d0c7]" />
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-6 md:space-y-8">
 
             {/* Intro */}
-            <div className="space-y-4">
-              <h2 className="font-display text-3xl font-normal text-[#1a1a1a] md:text-4xl">
+            <div className="space-y-3 md:space-y-4">
+              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-normal text-[#1a1a1a]">
                 Wojciech Kaczanowski
               </h2>
 
-              <p className="max-w-2xl leading-relaxed text-[#4a4a4a]">
+              <p className="max-w-2xl text-sm md:text-base leading-relaxed text-[#4a4a4a]">
                 Otwartość na rozmowę dotyczącą współpracy oraz nowych wyzwań
                 zawodowych.
               </p>
             </div>
 
             {/* Contact Grid */}
-            <div className="grid grid-cols-1 gap-6 pt-6 md:grid-cols-2">
+            <div className="grid grid-cols-1 gap-5 md:gap-6 pt-4 md:pt-6 md:grid-cols-2">
               {contactInfo.map((item, index) => (
                 <motion.div
                   key={item.label}
@@ -76,7 +74,7 @@ export default function Contact() {
                     duration: 0.4,
                     delay: index * 0.1,
                   }}
-                  className="border-b border-[#e7e3dc] pb-4"
+                  className="border-b border-[#e7e3dc] pb-3.5 md:pb-4"
                 >
                   <div className="space-y-2">
 
@@ -85,9 +83,9 @@ export default function Contact() {
                     </span>
 
                     {item.href ? (
-                      <a
+                      
                         href={item.href}
-                        className="block text-[#2a2a2a] transition-colors duration-300 hover:text-[#6a6a6a]"
+                        className="block text-sm md:text-base text-[#2a2a2a] transition-colors duration-300 hover:text-[#6a6a6a]"
                         target={
                           item.href.startsWith('http')
                             ? '_blank'
@@ -102,7 +100,7 @@ export default function Contact() {
                         {item.value}
                       </a>
                     ) : (
-                      <p className="text-[#2a2a2a]">
+                      <p className="text-sm md:text-base text-[#2a2a2a]">
                         {item.value}
                       </p>
                     )}
@@ -120,7 +118,7 @@ export default function Contact() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="mt-16 border-t border-[#e7e3dc] pt-8"
+            className="mt-12 md:mt-16 border-t border-[#e7e3dc] pt-6 md:pt-8"
           >
             <p className="text-center text-xs text-[#8a8580]">
               © 2026 Wojciech Kaczanowski
