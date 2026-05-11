@@ -6,155 +6,164 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center py-24 md:py-32 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-[#f5f1eb] via-[#f5f1eb] to-[#e8dfd4] opacity-60" />
-      
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-radial from-[#e8dfd4]/40 to-transparent blur-3xl" />
-      
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-radial from-[#c9bfb3]/20 to-transparent blur-3xl" />
+    <section className="relative min-h-screen flex items-center py-32 md:py-40 lg:py-48 overflow-hidden bg-[#1a1a1a]">
+      <div className="absolute inset-0 bg-gradient-to-b from-[#1a1a1a] via-[#1a1a1a] to-[#2a2a2a]/30" />
 
       <Container className="relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 lg:gap-28 items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.22, 0.61, 0.36, 1] }}
-            className="lg:col-span-7 order-2 lg:order-1"
+            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+            className="lg:col-span-7"
           >
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="mb-8"
+              transition={{ delay: 0.2, duration: 0.6 }}
+              className="mb-10"
             >
-              <span className="inline-block px-4 py-2 text-xs font-medium tracking-[0.2em] uppercase text-[#8a8176] border border-[#c9bfb3]/30 rounded-full">
-                Senior Executive Leader
+              <span className="inline-flex items-center gap-3 text-[11px] tracking-[0.3em] uppercase text-[#9d8b7a] font-medium">
+                <span className="w-8 h-px bg-[#9d8b7a]/50" />
+                Executive Leadership Portfolio
               </span>
             </motion.div>
 
             <motion.h1
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="mb-8 text-[#1a1816]"
+              transition={{ delay: 0.3, duration: 0.9 }}
+              className="max-w-4xl mb-10"
             >
-              Transforming Vision
+              Driving Sustainable
               <br />
-              Into Strategic Impact
+              Business Growth Through
+              <br />
+              Strategic Leadership
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-xl md:text-2xl font-light text-[#2a2823] mb-12 max-w-2xl leading-relaxed"
+              transition={{ delay: 0.45, duration: 0.8 }}
+              className="text-xl md:text-2xl text-[#b8b6b3] font-light leading-relaxed max-w-2xl mb-14"
             >
-              25+ years of executive leadership driving operational excellence, 
-              revenue growth, and organizational transformation across global markets.
+              Executive leader with over two decades of experience in operational excellence,
+              organizational transformation, and scalable business development across international markets.
             </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              className="mb-16 pl-6 border-l-2 border-[#c9bfb3]"
+              transition={{ delay: 0.55, duration: 0.8 }}
+              className="border-l border-[#8b7355]/40 pl-6 mb-16"
             >
-              <p className="text-lg text-[#8a8176] font-light italic max-w-xl">
-                "Strategic execution is not about perfection—it's about disciplined 
-                progress, aligned teams, and the courage to evolve."
+              <p className="text-[#9d8b7a] italic text-lg leading-relaxed max-w-xl">
+                “Long-term success is built through disciplined execution,
+                strategic thinking, and the ability to lead organizations through change.”
               </p>
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="flex flex-col sm:flex-row gap-4"
+              transition={{ delay: 0.65, duration: 0.8 }}
+              className="flex flex-col sm:flex-row gap-5"
             >
               <a
-                href="#contact"
-                className="group inline-flex items-center justify-center px-10 py-4 bg-[#2a2823] text-[#f5f1eb] text-sm font-medium tracking-wide transition-all duration-300 hover:bg-[#1a1816] hover:shadow-lg hover:shadow-[#2a2823]/20"
+                href="#experience"
+                className="inline-flex items-center justify-center px-9 py-4 bg-[#e8e6e3] text-[#1a1a1a] text-sm tracking-wide uppercase font-medium transition-all duration-300 hover:bg-white hover:shadow-xl"
               >
-                <span>Connect With Me</span>
+                View Experience
               </a>
 
               <a
-                href="#experience"
-                className="inline-flex items-center justify-center px-10 py-4 border border-[#c9bfb3] text-[#2a2823] text-sm font-medium tracking-wide transition-all duration-300 hover:border-[#8a8176] hover:bg-[#e8dfd4]/30"
+                href="#contact"
+                className="inline-flex items-center justify-center px-9 py-4 border border-[#5a5856] text-[#e8e6e3] text-sm tracking-wide uppercase font-medium transition-all duration-300 hover:border-[#9d8b7a] hover:text-white"
               >
-                View Experience
+                Contact
               </a>
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              className="mt-16 pt-12 border-t border-[#c9bfb3]/30"
+              transition={{ delay: 0.9, duration: 1 }}
+              className="mt-20 pt-12 border-t border-[#3a3838]"
             >
-              <div className="grid grid-cols-3 gap-8">
+              <div className="grid grid-cols-3 gap-8 max-w-2xl">
                 <div>
-                  <div className="text-3xl font-display font-light text-[#1a1816] mb-1">25+</div>
-                  <div className="text-xs text-[#8a8176] tracking-wide uppercase">Years</div>
+                  <div className="text-4xl md:text-5xl font-display text-[#e8e6e3] mb-2">20+</div>
+                  <div className="text-xs uppercase tracking-[0.2em] text-[#6a6764]">
+                    Years Experience
+                  </div>
                 </div>
+
                 <div>
-                  <div className="text-3xl font-display font-light text-[#1a1816] mb-1">$2.4B+</div>
-                  <div className="text-xs text-[#8a8176] tracking-wide uppercase">Revenue Impact</div>
+                  <div className="text-4xl md:text-5xl font-display text-[#e8e6e3] mb-2">12</div>
+                  <div className="text-xs uppercase tracking-[0.2em] text-[#6a6764]">
+                    Global Markets
+                  </div>
                 </div>
+
                 <div>
-                  <div className="text-3xl font-display font-light text-[#1a1816] mb-1">15</div>
-                  <div className="text-xs text-[#8a8176] tracking-wide uppercase">Markets</div>
+                  <div className="text-4xl md:text-5xl font-display text-[#e8e6e3] mb-2">$1B+</div>
+                  <div className="text-xs uppercase tracking-[0.2em] text-[#6a6764]">
+                    Business Impact
+                  </div>
                 </div>
               </div>
             </motion.div>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.4, ease: [0.22, 0.61, 0.36, 1] }}
-            className="lg:col-span-5 order-1 lg:order-2"
+            transition={{ duration: 1.1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
+            className="lg:col-span-5"
           >
             <div className="relative">
-              <div className="absolute -top-6 -right-6 w-full h-full border border-[#c9bfb3]/30 rounded-sm" />
-              
-              <div className="relative aspect-[3/4] bg-gradient-to-br from-[#e8dfd4] to-[#c9bfb3] rounded-sm overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
+              <div className="absolute -top-6 -right-6 w-full h-full border border-[#5a5856]/30" />
+
+              <div className="relative aspect-[3/4] overflow-hidden bg-[#2a2a2a]">
+                <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#2a2a2a] to-[#1a1a1a]">
                   <div className="text-center">
-                    <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-[#f5f1eb]/80 flex items-center justify-center">
-                      <svg className="w-16 h-16 text-[#8a8176]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    <div className="w-32 h-32 rounded-full border border-[#5a5856]/30 flex items-center justify-center mx-auto mb-6">
+                      <svg
+                        className="w-14 h-14 text-[#6a6764]"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={1.3}
+                          d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                        />
                       </svg>
                     </div>
-                    <p className="text-sm text-[#8a8176] font-light">Executive Portrait</p>
+
+                    <p className="text-[#6a6764] text-sm uppercase tracking-[0.2em]">
+                      Executive Portrait
+                    </p>
                   </div>
                 </div>
 
-                {/* <Image
-                  src="/images/executive-portrait.jpg"
+                {/*
+                <Image
+                  src="/images/executive.jpg"
                   alt="Executive Portrait"
                   fill
-                  className="object-cover"
                   priority
-                /> */}
+                  className="object-cover"
+                />
+                */}
               </div>
-
-              <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-gradient-to-br from-[#8a8176]/20 to-transparent rounded-full blur-2xl" />
             </div>
           </motion.div>
         </div>
       </Container>
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 1.2 }}
-        className="absolute bottom-12 left-1/2 -translate-x-1/2"
-      >
-        <a href="#experience" className="flex flex-col items-center gap-2 text-[#8a8176] hover:text-[#2a2823] transition-colors group">
-          <span className="text-xs tracking-widest uppercase">Scroll</span>
-        </a>
-      </motion.div>
     </section>
   );
 }
