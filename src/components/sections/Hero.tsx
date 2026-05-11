@@ -33,7 +33,7 @@ export default function Hero() {
               </h1>
 
               <p className="text-xl text-[#5c5c5c] font-light">
-                Doświadczenie w zarządzaniu operacjami i rozwoju organizacji
+                Manager i lider operacyjny
               </p>
 
             </div>
@@ -41,9 +41,8 @@ export default function Hero() {
             {/* Opis */}
             <div className="space-y-5">
               <p className="text-base leading-relaxed text-[#4f4f4f] max-w-xl">
-                Wieloletnie doświadczenie w zarządzaniu operacyjnym,
-                organizacji pracy zespołów oraz usprawnianiu procesów
-                wspierających efektywność działania firmy.
+                Budowanie efektywnych organizacji, rozwój zespołów i skalowanie procesów biznesowych.
+                Łączenie strategii, operacji i odpowiedzialności za wynik.
               </p>
             </div>
 
