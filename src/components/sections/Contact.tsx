@@ -21,7 +21,7 @@ const contactInfo = [
   },
   {
     label: 'Lokalizacja',
-    value: 'Warszawa, Polska',
+    value: 'Wrocław, Polska',
     href: null,
   },
 ];
