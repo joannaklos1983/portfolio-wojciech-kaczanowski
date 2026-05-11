@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+
 import Container from '@/components/layout/Container';
 
 const contactInfo = [
@@ -28,60 +29,89 @@ const contactInfo = [
 
 export default function Contact() {
   return (
-    <section id="kontakt" className="py-24 md:py-32 bg-[#f8f5f1] border-t border-[#ece8e1]">
+    <section
+      id="kontakt"
+      className="border-t border-[#ece8e1] bg-[#f8f5f1] py-24 md:py-32"
+    >
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="max-w-4xl mx-auto"
+          className="mx-auto max-w-4xl"
         >
-          <div className="flex items-center gap-4 mb-12">
-            <span className="text-xs text-[#6a6a6a] font-medium tracking-wider uppercase">
+          <div className="mb-12 flex items-center gap-4">
+            <span className="text-xs font-medium uppercase tracking-wider text-[#6a6a6a]">
               Kontakt
             </span>
-            <div className="flex-1 h-px bg-[#d5d0c7]" />
+
+            <div className="h-px flex-1 bg-[#d5d0c7]" />
           </div>
 
           <div className="space-y-8">
+
+            {/* Header */}
             <div className="space-y-4">
-              <h2 className="text-3xl md:text-4xl font-display font-normal text-[#1a1a1a]">
+              <h2 className="font-display text-3xl font-normal text-[#1a1a1a] md:text-4xl">
                 Wojciech Kaczanowski
               </h2>
-              <p className="text-[#4a4a4a] leading-relaxed max-w-2xl">
-                Otwartość na rozmowę dotyczącą współpracy oraz nowych wyzwań zawodowych.
+
+              <p className="max-w-2xl leading-relaxed text-[#4a4a4a]">
+                Otwartość na rozmowę dotyczącą współpracy oraz nowych wyzwań
+                zawodowych.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6">
+            {/* Contact Grid */}
+            <div className="grid grid-cols-1 gap-6 pt-6 md:grid-cols-2">
               {contactInfo.map((item, index) => (
                 <motion.div
-                  key={index}
+                  key={item.label}
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  transition={{
+                    duration: 0.4,
+                    delay: index * 0.1,
+                  }}
                   className="border-b border-[#e7e3dc] pb-4"
                 >
                   <div className="space-y-2">
+
                     <span className="text-xs uppercase tracking-wide text-[#7a7670]">
                       {item.label}
                     </span>
+
                     {item.href ? (
-                      
+                      <a
                         href={item.href}
+                        aria-label={item.label}
+                        target={
+                          item.href.startsWith('http')
+                            ? '_blank'
+                            : undefined
+                        }
+                        rel={
+                          item.href.startsWith('http')
+                            ? 'noopener noreferrer'
+                            : undefined
+                        }
                         className="block text-[#2a2a2a] transition-colors duration-300 hover:text-[#6a6a6a]"
                       >
                         {item.value}
                       </a>
                     ) : (
-                      <p className="text-[#2a2a2a]">{item.value}</p>
+                      <p className="text-[#2a2a2a]">
+                        {item.value}
+                      </p>
                     )}
+
                   </div>
                 </motion.div>
               ))}
             </div>
+
           </div>
         </motion.div>
       </Container>
