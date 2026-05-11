@@ -7,34 +7,36 @@ import Container from '@/components/layout/Container';
 
 export default function Hero() {
   return (
-    <section className="relative flex items-center overflow-hidden bg-[#f5f2ec] py-20 md:py-24">
+    <section className="relative flex items-center overflow-hidden bg-[#f5f2ec] py-16 md:py-20">
       <Container className="relative z-10">
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
+        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12">
 
           {/* Lewa kolumna */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="space-y-8 lg:col-span-7"
+            className="space-y-7 lg:col-span-7"
           >
 
-            {/* Nagłówek */}
-            <div className="space-y-3">
+            {/* Górny label */}
+            <div className="space-y-4">
 
-              <div className="mb-4 flex items-center gap-4">
-                <span className="text-sm font-medium text-[#6a6a6a]">
+              <div className="flex items-center gap-4">
+                <span className="text-sm text-[#6e6a66]">
                   FMCG • Sprzedaż • Zarządzanie oddziałami
                 </span>
 
-                <div className="h-px flex-1 bg-[#d5d0c7]" />
+                <div className="h-px flex-1 bg-[#d8d2ca]" />
               </div>
 
-              <h1 className="font-display text-4xl font-normal leading-tight text-[#1f1f1f] md:text-5xl lg:text-6xl">
+              {/* Nazwa */}
+              <h1 className="font-display text-5xl leading-[0.95] text-[#1f1f1f] md:text-6xl lg:text-[72px]">
                 Wojciech Kaczanowski
               </h1>
 
-              <p className="text-lg font-light text-[#5c5c5c] md:text-xl">
+              {/* Subheadline */}
+              <p className="text-xl text-[#5d5a56] md:text-2xl">
                 Zarządzanie sprzedażą i organizacją pracy zespołów
               </p>
 
@@ -42,61 +44,62 @@ export default function Hero() {
 
             {/* Opis */}
             <div>
-              <p className="max-w-xl text-base leading-relaxed text-[#4f4f4f]">
-                Doświadczenie w zarządzaniu oddziałami, organizacji pracy zespołów oraz realizacji celów sprzedażowych w środowisku FMCG.
+              <p className="max-w-xl text-[17px] leading-relaxed text-[#4f4b47]">
+                Doświadczenie w zarządzaniu oddziałami, organizacji pracy zespołów
+                oraz realizacji celów sprzedażowych w środowisku FMCG.
               </p>
             </div>
 
             {/* Kompetencje */}
-            <div className="grid max-w-2xl grid-cols-1 gap-x-8 gap-y-3 sm:grid-cols-2">
+            <div className="grid max-w-2xl grid-cols-1 gap-x-10 gap-y-3 pt-1 sm:grid-cols-2">
 
               <div className="flex items-center gap-3">
-                <div className="h-1.5 w-1.5 rounded-full bg-[#8a8580]" />
+                <div className="h-1.5 w-1.5 rounded-full bg-[#8d8882]" />
 
-                <span className="text-sm text-[#666666]">
+                <span className="text-[15px] text-[#66625d]">
                   Zarządzanie oddziałami
                 </span>
               </div>
 
               <div className="flex items-center gap-3">
-                <div className="h-1.5 w-1.5 rounded-full bg-[#8a8580]" />
+                <div className="h-1.5 w-1.5 rounded-full bg-[#8d8882]" />
 
-                <span className="text-sm text-[#666666]">
+                <span className="text-[15px] text-[#66625d]">
                   Koordynacja działań
                 </span>
               </div>
 
               <div className="flex items-center gap-3">
-                <div className="h-1.5 w-1.5 rounded-full bg-[#8a8580]" />
+                <div className="h-1.5 w-1.5 rounded-full bg-[#8d8882]" />
 
-                <span className="text-sm text-[#666666]">
+                <span className="text-[15px] text-[#66625d]">
                   Organizacja pracy zespołów
                 </span>
               </div>
 
               <div className="flex items-center gap-3">
-                <div className="h-1.5 w-1.5 rounded-full bg-[#8a8580]" />
+                <div className="h-1.5 w-1.5 rounded-full bg-[#8d8882]" />
 
-                <span className="text-sm text-[#666666]">
+                <span className="text-[15px] text-[#66625d]">
                   Sprzedaż i realizacja celów
                 </span>
               </div>
 
             </div>
 
-            {/* CTA */}
-            <div className="flex flex-col gap-3 pt-2 sm:flex-row">
+            {/* Przyciski */}
+            <div className="flex flex-col gap-3 pt-3 sm:flex-row">
 
               <a
                 href="#doswiadczenie"
-                className="inline-flex items-center justify-center bg-[#2a2a2a] px-7 py-3 text-sm font-medium text-[#f3f0eb] transition-colors duration-300 hover:bg-[#1f1f1f]"
+                className="inline-flex items-center justify-center bg-[#232323] px-7 py-3 text-sm text-[#f5f2ec] transition-all duration-300 hover:bg-[#161616]"
               >
                 Doświadczenie zawodowe
               </a>
 
               <a
                 href="#kontakt"
-                className="inline-flex items-center justify-center border border-[#c5c1ba] px-7 py-3 text-sm font-medium text-[#4f4f4f] transition-colors duration-300 hover:border-[#8a8580] hover:bg-[#ece8e1]"
+                className="inline-flex items-center justify-center border border-[#cfc8bf] px-7 py-3 text-sm text-[#4d4a46] transition-all duration-300 hover:border-[#a8a097] hover:bg-[#ece7e0]"
               >
                 Kontakt
               </a>
@@ -116,7 +119,7 @@ export default function Hero() {
             <div className="space-y-5">
 
               {/* Zdjęcie */}
-              <div className="relative aspect-[3/4] overflow-hidden border border-[#d5d0c7] bg-[#ece8e1]">
+              <div className="relative aspect-[3/4] overflow-hidden border border-[#d7d1c8] bg-[#ece7e0]">
                 <Image
                   src="/images/wojciech_kaczanowski.png"
                   alt="Wojciech Kaczanowski"
@@ -127,46 +130,46 @@ export default function Hero() {
               </div>
 
               {/* Informacje */}
-              <div className="border border-[#d5d0c7] bg-[#ece8e1] p-5">
+              <div className="border border-[#d7d1c8] bg-[#efeae3] p-5">
 
                 <div className="space-y-4">
 
-                  <div className="flex items-baseline justify-between border-b border-[#d5d0c7] pb-3">
-                    <span className="text-xs uppercase tracking-wide text-[#7a7670]">
-                      Doświadczenie
+                  <div className="flex items-center justify-between border-b border-[#d8d2ca] pb-3">
+                    <span className="text-[11px] tracking-[0.12em] text-[#7a756f]">
+                      DOŚWIADCZENIE
                     </span>
 
-                    <span className="text-sm text-[#2a2a2a]">
+                    <span className="text-sm text-[#242424]">
                       25+ lat
                     </span>
                   </div>
 
-                  <div className="flex items-baseline justify-between border-b border-[#d5d0c7] pb-3">
-                    <span className="text-xs uppercase tracking-wide text-[#7a7670]">
-                      Zakres działań
+                  <div className="flex items-center justify-between border-b border-[#d8d2ca] pb-3">
+                    <span className="text-[11px] tracking-[0.12em] text-[#7a756f]">
+                      ZAKRES DZIAŁAŃ
                     </span>
 
-                    <span className="text-sm text-[#2a2a2a]">
+                    <span className="text-sm text-[#242424]">
                       Operacje i sprzedaż
                     </span>
                   </div>
 
-                  <div className="flex items-baseline justify-between border-b border-[#d5d0c7] pb-3">
-                    <span className="text-xs uppercase tracking-wide text-[#7a7670]">
-                      Środowisko pracy
+                  <div className="flex items-center justify-between border-b border-[#d8d2ca] pb-3">
+                    <span className="text-[11px] tracking-[0.12em] text-[#7a756f]">
+                      ŚRODOWISKO PRACY
                     </span>
 
-                    <span className="text-sm text-[#2a2a2a]">
+                    <span className="text-sm text-[#242424]">
                       Organizacje wielooddziałowe
                     </span>
                   </div>
 
-                  <div className="flex items-baseline justify-between">
-                    <span className="text-xs uppercase tracking-wide text-[#7a7670]">
-                      Zespoły
+                  <div className="flex items-center justify-between">
+                    <span className="text-[11px] tracking-[0.12em] text-[#7a756f]">
+                      ZESPOŁY
                     </span>
 
-                    <span className="text-sm text-[#2a2a2a]">
+                    <span className="text-sm text-[#242424]">
                       100+ osób
                     </span>
                   </div>
