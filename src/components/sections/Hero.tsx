@@ -29,13 +29,11 @@ export default function Hero() {
             {/* Headline */}
             <div className="space-y-8">
               <h1 className="text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight font-display font-normal text-[#f1efec] max-w-4xl">
-                Doświadczenie w zarządzaniu operacjami i rozwoju struktur organizacyjnych
+               Zarządzanie operacyjne i rozwój organizacji
               </h1>
 
               <p className="max-w-2xl text-base md:text-lg leading-relaxed text-[#b2b0ad]">
-                Wieloletnie doświadczenie w zarządzaniu operacyjnym,
-                rozwijaniu zespołów oraz usprawnianiu procesów wspierających
-                efektywność organizacji i realizację celów biznesowych.
+               Doświadczenie w rozwijaniu procesów, organizacji pracy i zespołów wspierających sprawne funkcjonowanie firmy.
               </p>
             </div>
 
