@@ -20,7 +20,7 @@ export default function Hero() {
             {/* Top label */}
             <div className="flex items-center gap-4 mb-10">
               <span className="text-xs tracking-[0.2em] uppercase text-[#8c9199] font-medium">
-                Operacje • Zarządzanie • Rozwój Organizacji
+               Skuteczność • Odpowiedzialność • Rozwój organizacji
               </span>
 
               <div className="h-px flex-1 bg-[#3a3f46]" />
