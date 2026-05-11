@@ -100,15 +100,6 @@ export default function Hero() {
                       <p className="text-xs text-[#6a6764]">Zdjęcie profilowe</p>
                     </div>
                   </div>
-                  
-                  {/* Zamień na właściwe zdjęcie */}
-                  {/* <Image
-                    src="/images/profile.jpg"
-                    alt="Zdjęcie profilowe"
-                    fill
-                    className="object-cover"
-                    priority
-                  /> */}
                 </div>
               </div>
 
