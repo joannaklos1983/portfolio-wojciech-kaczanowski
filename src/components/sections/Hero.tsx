@@ -7,7 +7,7 @@ import Container from '@/components/layout/Container';
 
 export default function Hero() {
   return (
-    <section className="relative flex items-center overflow-hidden bg-[#f3f0eb] py-20 md:py-24">
+    <section className="relative flex items-center overflow-hidden bg-[#f5f2ec] py-20 md:py-24">
       <Container className="relative z-10">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
 
